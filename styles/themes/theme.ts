@@ -12,6 +12,7 @@ const theme: DefaultTheme = {
       one:      "#323232",
       two:      "#7A7A7A",
       three:    "#323232",
+      four:     "#777389",
     }
   },
 
