@@ -1,8 +1,9 @@
 import { FC } from "react";
 
 import Head from "next/head";
+import Image from "next/image";
 
-import { Logo, LogoLink, NavItems, NavItem } from "./HeaderNavigation.styles";
+import { LogoLink, NavItems, NavItem } from "./HeaderNavigation.styles";
 import { CustomButton as SignInButton } from "../../buttons/Buttons";
 
 const HeaderNavigation: FC = () => {
@@ -12,7 +13,7 @@ const HeaderNavigation: FC = () => {
         <title>Genzaar | Home</title>
       </Head>
       <LogoLink href="/">
-        <Logo
+        <Image
           src="img/genzaar-logo.svg"
           width={173}
           height={36}

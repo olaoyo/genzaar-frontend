@@ -13,6 +13,7 @@ declare module "styled-components" {
         two:      string;
         three:    string;
         four:     string;
+        five:     string;
       };
     };
 

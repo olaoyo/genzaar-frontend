@@ -1,13 +1,10 @@
 import styled from "styled-components";
-import Image from "next/image";
 import Link from "next/link";
 
 const LogoLink = styled(Link)`
   grid-column: 2 / span 2;
   margin: 3.8rem 0 3.8rem -3.5rem;
 `;
-
-const Logo = styled(Image)``;
 
 const NavItems = styled.div`
   grid-column: 4 / span 6;
@@ -32,4 +29,4 @@ const NavItem = styled(Link)`
   }
 `;
 
-export { LogoLink, Logo, NavItems, NavItem };
+export { LogoLink, NavItems, NavItem };
