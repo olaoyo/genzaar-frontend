@@ -1,6 +1,7 @@
 import Head from "next/head";
 import HeaderNavigation from "../components/navigation/header/HeaderNavigation";
 import Hero from "../components/routes/home/hero/Hero";
+import Info from "../components/routes/home/info/Info";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <HeaderNavigation />
       <Hero />
+      <Info />
     </>
   );
 }
