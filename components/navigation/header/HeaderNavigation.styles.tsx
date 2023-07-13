@@ -29,4 +29,11 @@ const NavItem = styled(Link)`
   }
 `;
 
-export { LogoLink, NavItems, NavItem };
+const ButtonContainer = styled.div`
+  grid-column: 11 / span 1;
+  justify-self: end;
+  align-self: center;
+  margin-right: -3.5rem;
+`;
+
+export { LogoLink, NavItems, NavItem, ButtonContainer };

@@ -3,7 +3,7 @@ import { FC } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-import { LogoLink, NavItems, NavItem } from "./HeaderNavigation.styles";
+import { LogoLink, NavItems, NavItem, ButtonContainer } from "./HeaderNavigation.styles";
 import { CustomButton as SignInButton } from "../../buttons/Buttons";
 
 const HeaderNavigation: FC = () => {
@@ -27,7 +27,9 @@ const HeaderNavigation: FC = () => {
         <NavItem href="/">Investment</NavItem>
         <NavItem href="/">About</NavItem>
       </NavItems>
-      <SignInButton signIn>Sign In</SignInButton>
+      <ButtonContainer>
+        <SignInButton signIn>Sign In</SignInButton>
+      </ButtonContainer>
     </>
   );
 };

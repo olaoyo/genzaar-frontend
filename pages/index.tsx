@@ -2,6 +2,7 @@ import Head from "next/head";
 import HeaderNavigation from "../components/navigation/header/HeaderNavigation";
 import Hero from "../components/routes/home/hero/Hero";
 import Info from "../components/routes/home/info/Info";
+import PocketMoney from "../components/routes/home/pocketMoney/PocketMoney";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <HeaderNavigation />
       <Hero />
       <Info />
+      <PocketMoney />
     </>
   );
 }

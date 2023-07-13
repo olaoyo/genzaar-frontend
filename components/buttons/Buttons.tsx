@@ -1,14 +1,13 @@
 import styled, { css } from "styled-components";
 
-const CustomButton = styled.button<{ signIn?: boolean; createAccount?: boolean }>`
-  ${({ signIn, createAccount }) =>
+const CustomButton = styled.button<{
+  signIn?: boolean;
+  createAccount?: boolean;
+  pocketMoney?: boolean;
+}>`
+  ${({ signIn, createAccount, pocketMoney }) =>
     signIn
       ? css`
-          grid-column: 11 / span 1;
-          justify-self: end;
-          align-self: center;
-          margin-right: -3.5rem;
-
           width: 11.4rem;
           height: 4.4rem;
           border: 1px solid ${({ theme }) => theme.colors.grey.one};
@@ -31,8 +30,6 @@ const CustomButton = styled.button<{ signIn?: boolean; createAccount?: boolean }
         `
       : createAccount
       ? css`
-          grid-row: 3 / span 1;
-
           width: 29rem;
           height: 7.2rem;
           color: ${({ theme }) => theme.colors.primary};
@@ -48,6 +45,32 @@ const CustomButton = styled.button<{ signIn?: boolean; createAccount?: boolean }
             color: ${({ theme }) => theme.colors.tertiary};
             border: 1px solid ${({ theme }) => theme.colors.tertiary};
             transform: translateY(-2px) scale(1.01);
+          }
+
+          :active {
+            transform: translateY(0) scale(1);
+          }
+        `
+      : pocketMoney
+      ? css`
+          width: 26rem;
+          height: 5.6rem;
+          background-color: ${({ theme }) => theme.colors.tertiary};
+          color: ${({ theme }) => theme.colors.primary};
+          font-size: ${({ theme }) => theme.fontSizes.paragraphs.p3};
+          font-weight: 600;
+          border-radius: 2.4rem;
+          text-align: right;
+          padding-right: 4.5rem;
+          transition: all 0.2s ease-in-out;
+
+          :hover {
+            cursor: pointer;
+            background-color: ${({ theme }) => theme.colors.primary};
+            color: ${({ theme }) => theme.colors.tertiary};
+            border: 1px solid ${({ theme }) => theme.colors.tertiary};
+            transform: translateY(-2px) scale(1.01);
+            padding-right: 5.5rem;
           }
 
           :active {

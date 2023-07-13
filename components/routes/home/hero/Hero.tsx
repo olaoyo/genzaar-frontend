@@ -8,6 +8,7 @@ import {
   Details,
   HeroImageContainer,
   HeroImage,
+  ButtonContainer
 } from "./Hero.styles";
 import { CustomButton as CreateAnAccountButton } from "../../../buttons/Buttons";
 
@@ -26,9 +27,11 @@ const Hero: FC = () => {
         Cursus elit magna vestibulum nibh ullamcorper condimentum vestibulum id.
         Diam sed orci{" "}
       </Details>
-      <CreateAnAccountButton createAccount>
-        Create an Account
-      </CreateAnAccountButton>
+      <ButtonContainer>
+        <CreateAnAccountButton createAccount>
+          Create an Account
+        </CreateAnAccountButton>
+      </ButtonContainer>
       <HeroImageContainer>
         <HeroImage girl03>
           <Image src={Girl03} width={308} height={429} alt="Baby Girl" />

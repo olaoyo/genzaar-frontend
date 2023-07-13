@@ -74,4 +74,9 @@ const HeroImage = styled.div<{
         `
       : css``}
 `;
-export { HeroStyles, Header, Details, HeroImageContainer, HeroImage };
+
+const ButtonContainer = styled.div`
+  grid-row: 3 / span 1;
+`
+
+export { HeroStyles, Header, Details, HeroImageContainer, HeroImage, ButtonContainer };
