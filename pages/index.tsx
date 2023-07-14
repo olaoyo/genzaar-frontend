@@ -3,6 +3,7 @@ import HeaderNavigation from "../components/navigation/header/HeaderNavigation";
 import Hero from "../components/routes/home/hero/Hero";
 import Info from "../components/routes/home/info/Info";
 import PocketMoney from "../components/routes/home/pocketMoney/PocketMoney";
+import Vault from "../components/routes/home/vault/Vault";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Hero />
       <Info />
       <PocketMoney />
+      <Vault />
     </>
   );
 }
