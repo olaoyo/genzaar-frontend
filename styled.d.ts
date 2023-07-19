@@ -8,6 +8,7 @@ declare module "styled-components" {
       tertiary:   string;
       accents:    string;
       green:      string;
+      purple:      string;
       grey: {
         one:      string;
         two:      string;

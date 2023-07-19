@@ -8,6 +8,7 @@ const theme: DefaultTheme = {
     tertiary:   "#1D163A",
     accents:    "#FFF9E5",
     green:      "#19B31F",
+    purple:     "#DEBEFF",
     grey: {
       one:      "#323232",
       two:      "#7A7A7A",
