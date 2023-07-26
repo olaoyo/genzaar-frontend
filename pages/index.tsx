@@ -6,6 +6,7 @@ import PocketMoney from "../components/routes/home/pocketMoney/PocketMoney";
 import Vault from "../components/routes/home/vault/Vault";
 import Designs from "../components/routes/home/designs/Designs";
 import Games from "../components/routes/home/games/Games";
+import Testimonials from "../components/routes/home/testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <Vault />
       <Designs />
       <Games />
+      <Testimonials />
     </>
   );
 }
