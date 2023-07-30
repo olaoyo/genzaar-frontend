@@ -8,6 +8,7 @@ import Designs from "../components/routes/home/designs/Designs";
 import Games from "../components/routes/home/games/Games";
 import Testimonials from "../components/routes/home/testimonials/Testimonials";
 import Mobile from "../components/routes/home/mobile/Mobile";
+import FooterNavigation from "../components/navigation/footer/FooterNavigation";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       <Games />
       <Testimonials />
       <Mobile />
+      <FooterNavigation />
     </>
   );
 }
