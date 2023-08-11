@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import Link from "next/link";
 
 const HeroStyles = styled.div`
   grid-column: 1 / span 12;
@@ -75,7 +76,7 @@ const HeroImage = styled.div<{
       : css``}
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled(Link)`
   grid-row: 3 / span 1;
 `
 

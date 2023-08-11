@@ -4,8 +4,9 @@ const CustomCard = styled.article<{
   pocketMoney?: boolean;
   vault01?: boolean;
   vault02?: boolean;
+  auth?: boolean;
 }>`
-  ${({ pocketMoney, vault01, vault02 }) =>
+  ${({ pocketMoney, vault01, vault02, auth }) =>
     pocketMoney
       ? css`
           width: 32rem;
@@ -46,6 +47,22 @@ const CustomCard = styled.article<{
           font-size: ${({ theme }) => theme.fontSizes.paragraphs.p3};
           font-weight: 500;
           color: ${({ theme }) => theme.colors.tertiary};
+        `
+      : auth
+      ? css`
+          display: grid;
+          grid-template-rows: repeat(6, max-content);
+          row-gap: 3rem;
+
+          justify-items: center;
+          align-content: center;
+
+
+          width: 68.8rem;
+          height: 78.4rem;
+          fill: rgba(255, 255, 255, 0.6);
+          box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+          border-radius: 2.4rem;
         `
       : css``}
 `;

@@ -29,7 +29,7 @@ const NavItem = styled(Link)`
   }
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled(Link)`
   grid-column: 11 / span 1;
   justify-self: end;
   align-self: center;

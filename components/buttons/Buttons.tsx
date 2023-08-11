@@ -4,8 +4,9 @@ const CustomButton = styled.button<{
   signIn?: boolean;
   createAccount?: boolean;
   pocketMoney?: boolean;
+  authButton?: boolean;
 }>`
-  ${({ signIn, createAccount, pocketMoney }) =>
+  ${({ signIn, createAccount, pocketMoney, authButton }) =>
     signIn
       ? css`
           width: 11.4rem;
@@ -76,6 +77,21 @@ const CustomButton = styled.button<{
           :active {
             transform: translateY(0) scale(1);
           }
+        `
+      : authButton
+      ? css`
+          width: 44rem;
+          height: 5.6rem;
+          justify-content: flex-end;
+          align-items: center;
+          flex-shrink: 0;
+
+          border-radius: 0.8rem;
+          border: 1px solid ${({ theme }) => theme.colors.tertiary};
+          background: ${({ theme }) => theme.colors.tertiary};
+          color: ${({ theme }) => theme.colors.primary};
+          font-size: ${({ theme }) => theme.fontSizes.paragraphs.p3};
+          font-weight: ${({ theme }) => theme.fontWeights.semiBold};
         `
       : css``}
 `;

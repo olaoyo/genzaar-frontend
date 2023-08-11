@@ -1,18 +1,28 @@
 import { FC } from "react";
+import { useRouter } from "next/router";
 
 import Head from "next/head";
 import Image from "next/image";
 
-import { LogoLink, NavItems, NavItem, ButtonContainer } from "./HeaderNavigation.styles";
+import {
+  LogoLink,
+  NavItems,
+  NavItem,
+  ButtonContainer,
+} from "./HeaderNavigation.styles";
 import { CustomButton as SignInButton } from "../../buttons/Buttons";
 
+import routes from "../../../paths/routes/routes";
+
 const HeaderNavigation: FC = () => {
+  const router = useRouter();
+
   return (
     <>
       <Head>
-        <title>Genzaar | Home</title>
+        <title>Genzaar | Navigation</title>
       </Head>
-      <LogoLink href="/">
+      <LogoLink href={routes.home}>
         <Image
           src="img/genzaar-logo.svg"
           width={173}
@@ -21,14 +31,19 @@ const HeaderNavigation: FC = () => {
         />
       </LogoLink>
       <NavItems>
-        <NavItem href="/">Home</NavItem>
+        <NavItem href={routes.home}>Home</NavItem>
         <NavItem href="/">Savings</NavItem>
         <NavItem href="/">Transfer</NavItem>
         <NavItem href="/">Investment</NavItem>
         <NavItem href="/">About</NavItem>
       </NavItems>
-      <ButtonContainer>
-        <SignInButton signIn>Sign In</SignInButton>
+      <ButtonContainer href={routes.auth.login}>
+        {/* Conditionally render the Sign In button on the auth form */}
+        {router.pathname === routes.home ? (
+          <SignInButton signIn>Sign In</SignInButton>
+        ) : (
+          ""
+        )}
       </ButtonContainer>
     </>
   );

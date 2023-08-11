@@ -19,6 +19,8 @@ import CoinBig02 from "./image/CoinBig02.png";
 import CoinSmall01 from "./image/CoinSmall01.png";
 import CoinSmall02 from "./image/CoinSmall02.png";
 
+import routes from "../../../../paths/routes/routes";
+
 const Hero: FC = () => {
   return (
     <HeroStyles>
@@ -27,7 +29,7 @@ const Hero: FC = () => {
         Cursus elit magna vestibulum nibh ullamcorper condimentum vestibulum id.
         Diam sed orci{" "}
       </Details>
-      <ButtonContainer>
+      <ButtonContainer href={routes.auth.register}>
         <CreateAnAccountButton createAccount>
           Create an Account
         </CreateAnAccountButton>

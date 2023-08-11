@@ -9,6 +9,16 @@ import {
 } from "./FooterNavigation.styles";
 
 const FooterNavigation: FC = () => {
+
+  const date = new Date();
+  const day = date.getDay();
+  const month = date.getMonth();
+  const year = date.getFullYear();
+
+  let dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  let monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+
   return (
     <FooterContainer>
       <FooterLinksContainer>
@@ -35,8 +45,7 @@ const FooterNavigation: FC = () => {
         </FooterLinksGrid>
       </FooterLinksContainer>
       <FooterText>
-        In et vestibulum eu faucibus arcu ornare accumsan quam. Tellus amet
-        integer orci nullam erat enim morbi sed.
+        Today is {`${dayName[day]}`}, {`${monthName[month]}`} {day}, {year}. Hope Genzaar helped your financial goals.
       </FooterText>
     </FooterContainer>
   );
