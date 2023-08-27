@@ -1,15 +1,13 @@
 import { FC, useState } from "react";
 
-import Image, { StaticImageData } from "next/image";
-
 import {
   LoginFormContainer,
   LoginFormLeft,
-  LoginHeader,
-  LoginText,
-  LoginImage,
+  LoginFormMiddle,
   LoginFormRight,
+  LoginText,
   LabelAndInput,
+  TermsAndConditionsAndForgotPassword,
   TermsAndConditions,
   Checkbox,
   LoginLink,
@@ -22,8 +20,6 @@ import {
 } from "../../../inputs/Inputs";
 import { CustomButton as LoginButton } from "../../../buttons/Buttons";
 
-const Piggy: StaticImageData = require("./image/Piggy.png");
-
 import routes from "../../../../paths/routes/routes";
 
 const LoginForm: FC = () => {
@@ -32,19 +28,10 @@ const LoginForm: FC = () => {
 
   return (
     <LoginFormContainer>
-      <LoginFormLeft>
-        <LoginHeader>
-          The most Trusted and Reliable Online Banking Platform.
-        </LoginHeader>
-        <LoginText paragraph>Trusted by 5 Million+ Users Nationwide</LoginText>
-        <LoginImage>
-          <Image src={Piggy} width={559} height={563} alt="Piggy" />
-        </LoginImage>
-      </LoginFormLeft>
-
-      <LoginFormRight>
+      <LoginFormLeft></LoginFormLeft>
+      <LoginFormMiddle>
         <LoginCard auth>
-          <LoginText header>Create An Account</LoginText>
+          <LoginText header>Log In</LoginText>
           <LabelAndInput>
             <LoginLabel>Email</LoginLabel>
             <LoginInput
@@ -67,19 +54,23 @@ const LoginForm: FC = () => {
               required
             />
           </LabelAndInput>
-          <TermsAndConditions>
-            <Checkbox type="checkbox" />
-            <LoginText terms>Agree with our terms and conditions?</LoginText>
-          </TermsAndConditions>
-          <LoginButton authButton>Sign Up</LoginButton>
+          <TermsAndConditionsAndForgotPassword>
+            <TermsAndConditions>
+              <Checkbox type="checkbox" />
+              <LoginText terms>Remember me</LoginText>
+            </TermsAndConditions>
+            <LoginText forgotPassword>Forgot Password?</LoginText>
+          </TermsAndConditionsAndForgotPassword>
+          <LoginButton authButton>Log In</LoginButton>
           <LoginText terms>
-            I’m already a member?
-            <LoginLink href={routes.auth.login}>
-              <span>Log In</span>
+            Don't have an account?&nbsp;
+            <LoginLink href={routes.auth.register}>
+              <span>Create One</span>
             </LoginLink>
           </LoginText>
         </LoginCard>
-      </LoginFormRight>
+      </LoginFormMiddle>
+      <LoginFormRight></LoginFormRight>
     </LoginFormContainer>
   );
 };

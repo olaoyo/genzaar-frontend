@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useRouter } from "next/router";
 
 import Head from "next/head";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import {
   LogoLink,
@@ -11,6 +11,8 @@ import {
   ButtonContainer,
 } from "./HeaderNavigation.styles";
 import { CustomButton as SignInButton } from "../../buttons/Buttons";
+
+const Logo: StaticImageData = require("./image/genzaar-logo.svg")
 
 import routes from "../../../paths/routes/routes";
 
@@ -24,7 +26,7 @@ const HeaderNavigation: FC = () => {
       </Head>
       <LogoLink href={routes.home}>
         <Image
-          src="img/genzaar-logo.svg"
+          src={Logo}
           width={173}
           height={36}
           alt="Genzaar Logo"
